@@ -1,0 +1,13 @@
+import { Router } from "express";
+import { dashboardController } from "../controllers/dashboard.controller.js";
+
+const router = Router();
+
+router.get(
+  "/stats",
+  dashboardController.getDashboardStats.bind(
+    dashboardController
+  )
+);
+
+export default router;
